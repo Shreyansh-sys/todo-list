@@ -1,0 +1,91 @@
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    font-family: 'Roboto';
+}
+
+header{
+    grid-row: 1 / 2;
+    background-color: rgb(40, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.main-container{
+    color: rgb(40, 38, 38);
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+
+.form-container{
+    grid-column: 1 / 2;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-element{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    margin-right: 1em;
+}
+
+input{
+    padding: 0.3em;
+}
+
+.todos-main-container{
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3em;
+    overflow-y: auto;
+    padding: 2em;
+}
+
+.todo-div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: antiquewhite;
+}
+
+.todo-div p{
+    color: #808080
+}
