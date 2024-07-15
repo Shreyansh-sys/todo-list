@@ -17,7 +17,11 @@
     <div class="main-container">
 
         <div class="form-container">
-            <form action="">
+
+            <div class="projects-container">
+            </div>
+
+            <form class="form" action="">
                 <h1>Add a new to-do</h1>
                 <div class="form-element">
                     <label for="todo-title">Title:</label>
@@ -32,7 +36,11 @@
                     <input type="number" id="priority" name="priority">
                 </div>
                 <div class="form-element">
-                    <input type="submit" value="Add todo" id="submit-button">
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" name="dueDate">
+                </div>
+                <div class="form-element">
+                    <input class="project-button" type="submit" value="Add todo" id="submit-button">
                 </div>
             </form>
         </div>
