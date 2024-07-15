@@ -32,6 +32,7 @@ header{
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 2fr 4fr;
+    height: 100%;
 }
 
 .form-container{
@@ -69,7 +70,7 @@ input{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     justify-content: flex-start;
     align-items: center;
     gap: 0.3em;
@@ -77,15 +78,36 @@ input{
     padding: 2em;
 }
 
-.todo-div{
+.todo-ele{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 20em;
     justify-content: center;
     align-items: flex-start;
     background-color: antiquewhite;
+    padding: 1em;
+    border: solid 1px antiquewhite;
+    border-radius: 1em;
+    margin-left: 5em;
 }
 
 .todo-div p{
     color: #808080
+}
+
+.todo-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+    width: 10em;
+    height: 3em;
+    padding: 0.5em;
+    border: solid 1px red;
+    border-radius: 0.5em;
 }
