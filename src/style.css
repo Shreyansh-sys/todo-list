@@ -25,6 +25,9 @@ header{
     justify-content: center;
     align-items: center;
     color: antiquewhite;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .main-container{
@@ -42,6 +45,10 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    /* overflow-y: auto;  */
 }
 
 .form, .project-form{
@@ -138,4 +145,15 @@ input{
     border: solid 1px #ccc;
     border-radius: 0.5em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-delete-button{
+    border: none;
+    background:none;
+    margin-left: -1em;
+}
+
+.project-delete-button img{
+    width: 1em;
+    height: 1em;
 }

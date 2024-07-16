@@ -64,6 +64,10 @@ function render() {
         project_button.addEventListener('click', () => {
             displayProject(project);
         })
+
+        project_delete_button.addEventListener('click', () => {
+            deleteProject(project);
+        })
     })
 
     const addProjectButton = document.createElement('button');
@@ -75,6 +79,16 @@ function render() {
 
     projects_container.appendChild(addProjectButton);
 
+}
+
+function deleteProject(project){
+    console.log("delete project");
+    const projectIndex = projects.findIndex(p => p.title === project.title);
+        if (projectIndex != -1) {
+            projects.splice(projectIndex, 1);
+        }
+        else console.log("Todo not found!");
+    render();    
 }
 
 function displayDefaultProject() {
@@ -115,7 +129,6 @@ function displayDefaultProject() {
             displayDefaultProject();
         })
     })
-
 }
 
 function displayProject(project) {
@@ -163,8 +176,6 @@ function showNewProjectForm() {
     })
 }
 
-
-
 document.getElementById('submit-button').addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -188,8 +199,6 @@ document.getElementById('submit-button').addEventListener('click', (event) => {
 
 function addDefaultTodo(todo) {
     defaultTodos.push(todo);
-    // displayDefaultTodos();
-    // render();
 }
 
 function addProject(project) {
